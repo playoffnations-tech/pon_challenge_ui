@@ -6,11 +6,11 @@
 
 <script>
 import { defineComponent } from "vue";
-import Table from "./ClassificationTable.vue";
+import ClassificationTable from "./ClassificationTable.vue";
 export default defineComponent({
   name: "PlayoffnationsChallenge",
   components: {
-    Table,
+    ClassificationTable,
   },
   props: {
     theme: String,
@@ -20,12 +20,6 @@ export default defineComponent({
       toggleActive: false,
       changeTheme: this.theme,
     };
-  },
-  methods: {
-    swapTheme(value) {
-      this.changeTheme = value ? "dark" : "light";
-      this.$emit("swap", this.changeTheme);
-    },
   },
 });
 </script>
